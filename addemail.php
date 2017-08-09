@@ -4,7 +4,7 @@ $lastname=$_POST['lastname'];
 $email=$_POST['email'];
 
 $start=mysqli_connect('localhost','elmer','ayfoinUp9ZRGeYHV','elmer_emails') or die ("Error connecting to MySQL database");
-$query="INSER INTO subscribers values ('$firstname', '$lastname','$email')";
+$query="INSER INTO subscribers (first_name, last_name, email)"." VALUES ('$firstname', '$lastname','$email')";
 
 $result=mysqli_query($start,$query) or die ("Error querying DB");
 
